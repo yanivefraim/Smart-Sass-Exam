@@ -5,9 +5,9 @@ Smart Sass Exam
 It supports may useful features, such as nesting, variables, imports, inheritance, mixins and more. 
 
 In large projects with many Sass files, constantly compiling all the Sass files to CSS can be expensive during dev time.
-**Your goal** is to create a 'Smart Sass' *node module* which, when run, will help to optimize the Sass compilation by deciding which files need to be compiled.
+**Your goal** is to create a 'Smart Sass' *node module* which, when run, will help to optimize the Sass compilation by deciding which files need to be compiled. If compilation of a sass a file would have the same css output as before, then it does not need to be compiled again.
 
-The module should receive an array of source directories/patterns as input, supporting the **glob/minimatch** patterns (representing where the Sass files are located), and a target directory root, which is where the css files are written to using the same patterns applied to the target root directory.
+The module should receive an array of source directories/patterns as input (i.e. using [glob](https://github.com/isaacs/node-glob), [minimatch](https://github.com/isaacs/minimatch) or the like), representing where the Sass files are located, and a target directory root which represents where the css files are written to using the same patterns applied to the target root directory.
 
 Your output should be an array of the files which need to be compiled.
 
@@ -48,4 +48,7 @@ function smartSass(sourcePatterns, targetDirectoryRoot, callback){
 The callback should support the node-style callbacks in order to support error reporting.
 
 
-#### Please also submit a **partial solution** if you have not completed it. A partial solution is better than none at all!
+**Please also submit a partial solution if you have not completed it. A partial solution is better than none at all.**
+
+###Send your solution as a zip file to etai@wix.com
+
