@@ -11,8 +11,8 @@ The module should receive an array of source directories/patterns as input, supp
 
 Your output should be an array of the files which need to be compiled.
 
->###**Guidelines:**
->
+###**Guidelines:**
+
 >1. Although you do not need to actually compile the files, you should carefully read the [features supported by Sass](http://sass-lang.com/guide). 
 >There may be features you need to specifically account for when deciding what to compile.
 >2. The module can have dependencies. Use of utilities is encouraged (and likely necessary for a good solution). 
