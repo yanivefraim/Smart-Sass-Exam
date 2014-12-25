@@ -1,19 +1,15 @@
 Smart Sass Exam
 ===============
 
-Sass (Syntactically Awesome Stylesheets) is a language that compiles into CSS. 
+[Sass](http://sass-lang.com/) is a language that compiles into CSS. 
 It supports may useful features, such as nesting, variables, imports, inheritance, mixins and more. 
-You can read more about sass here: http://sass-lang.com/guide
 
 In large projects with many Sass files, constantly compiling all the Sass files to CSS can be expensive during dev time.
+**Your goal** is to create a 'Smart Sass' *node module* which, when run, will help to optimize the Sass compilation by deciding which files need to be compiled.
 
-Your goal is to create a 'Smart Sass' **node module** which, when run, will optimize the Sass compilation by deciding which files need to be compiled.
-
-Your module should receive an array of source directories/patterns as input, supporting the **glob/minimatch** patterns (representing where the Sass files are located), and a target directory root, which is where the css files are written to using the same patterns applied to the target root directory.
+The module should receive an array of source directories/patterns as input, supporting the **glob/minimatch** patterns (representing where the Sass files are located), and a target directory root, which is where the css files are written to using the same patterns applied to the target root directory.
 
 Your output should be an array of the files which need to be compiled.
-
-
 
 >###**Guidelines:**
 >
@@ -25,12 +21,10 @@ Your output should be an array of the files which need to be compiled.
 >  * If it's synchronous, it should return an array of the filepaths which need to be compiled by Sass.
 >  * If it's asynchronous, it should also accept a callback, which will be called upon completion with an array of the filepaths as the argument to the callback.
 > 4. Your submittd result should also wrap the module and log the result to the system console.
-> 5. **Bonus points**: 
->  * write it TDD style with good test coverage.
->  * include example
+> 5. **Bonus points**: write it TDD style with good test coverage.
 
 
-In other words, a **synchronous** version of the exported module should have the following signature:
+A **synchronous** version of the exported module should have the following signature:
 ```js
 function smartSass(sourcePatterns, targetDirectoryRoot){
  var filesWhichNeedSass = [];
