@@ -9,7 +9,8 @@ In large projects with many Sass files, constantly compiling all the Sass files 
 **Your goal:** To create a 'Smart Sass' *[node](http://nodejs.org/) module* which, when run, will help to optimize the Sass compilation by deciding which files need to be compiled.
 How can the compilation be optimized? If compilation of a sass a file would have the same css output as before, then it does not need to be compiled again.
 
-The module should receive an array of source directories/patterns as input (i.e. using [glob](https://github.com/isaacs/node-glob), [minimatch](https://github.com/isaacs/minimatch) or the like), representing where the Sass files are located, and a target directory root which represents where the css files are written to using the same patterns applied to the target root directory.
+The module should receive an array of source directories/patterns as input (i.e. using [glob](https://github.com/isaacs/node-glob), [minimatch](https://github.com/isaacs/minimatch) or the like, for example:
+```['src/components/**/*', 'src/widgets/**/*']), representing where the Sass files are located, and a target directory root which represents where the css files are written to using the same patterns applied to the target root directory.
 
 Your output should be an array of the files which need to be compiled.
 
