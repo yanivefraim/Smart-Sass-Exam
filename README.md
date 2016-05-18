@@ -56,5 +56,5 @@ The callback should support the node-style callbacks in order to support error r
 
 **Please also submit a partial solution if you have not completed it. A partial solution is better than none at all.**
 
-###Send your solution as a zip file to etai@wix.com
+###Send your solution as a zip file to yanivef@wix.com
 
